@@ -3,7 +3,7 @@ let b = ''
 let sign = ''
 let finish = false
 const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']
-const action = ['-', '+', 'X', '/']
+const action = ['-', '+', 'x', '/']
 
 const out = document.querySelector(".calc-screen p")
 
@@ -36,7 +36,6 @@ document.querySelector(".buttons").onclick = (event) => {
       b += key
       out.textContent = b
     }
-    console.log(a, b, sign)
     return
   }
   // +-\
@@ -59,7 +58,8 @@ document.querySelector(".buttons").onclick = (event) => {
       case '/':
         a = (+a) / (+b)
         break
-      case 'X':
+      case 'x':
+        debugger
         a = (+a) * (+b)
         break
     }
